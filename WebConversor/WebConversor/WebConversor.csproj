@@ -5,7 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controller\" />
+    <PackageReference Include="Elmah.Io.AspNetCore" Version="3.10.122" />
+    <PackageReference Include="FluentValidator" Version="2.0.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Conversor.Aplicacao\Conversor.Aplicacao.csproj" />
+    <ProjectReference Include="..\Conversor.Entidades\Conversor.Dominio.csproj" />
+    <ProjectReference Include="..\Conversor.Repositorio\Conversor.Repositorio.csproj" />
+    <ProjectReference Include="..\Conversor.Shared\Conversor.Shared.csproj" />
   </ItemGroup>
 
 </Project>
