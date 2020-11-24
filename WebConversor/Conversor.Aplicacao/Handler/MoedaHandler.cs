@@ -25,16 +25,17 @@ namespace Conversor.Aplicacao.Handler
                 var moedasGravar = CriarListaMoedaGravar(command);
                 _repositorioMoeda.Salvar(moedasGravar);
                 return new ObjetoResultado(true, "Lista de Moedas Gravada Com Sucesso", null);
-            }
+           }
            else
            {
-                return new ObjetoResultado(false, "Não foi possível efetuar a gravação", command.Notifications);
+                return new ObjetoResultado(false, "Não foi possível validar o Json", command.Notifications);
            }
         }
         private List<Moedas> CriarListaMoedaGravar(EntradaMoedas listaentradaMoedas)
         {
             DateTime dataGravacao = DateTime.Now;
             var moedasGravar = new List<Moedas>();
+            Int16 status = 1;
             for (int i =0; i < listaentradaMoedas.entradaMoedas.Count; i++)
             {
                 moedasGravar.Add(
@@ -43,7 +44,8 @@ namespace Conversor.Aplicacao.Handler
                         listaentradaMoedas.entradaMoedas[i].Moeda,
                         listaentradaMoedas.entradaMoedas[i].Data_Inicio,
                         listaentradaMoedas.entradaMoedas[i].Data_Fim,
-                        dataGravacao
+                        dataGravacao,
+                        status
                     ));
             }
             return moedasGravar;
