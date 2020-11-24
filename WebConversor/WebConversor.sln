@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConversor", "WebConversor\WebConversor.csproj", "{A3193FC8-F7AB-401D-A8FA-1D82D8AC7C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebConversor", "WebConversor\WebConversor.csproj", "{A3193FC8-F7AB-401D-A8FA-1D82D8AC7C3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{A2E0AB5B-6221-4048-AA82-A82194369E01}"
 EndProject
@@ -15,17 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4190F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3027DA9D-44B2-48AC-8885-12FE1D515C1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor.Dominio", "Conversor.Entidades\Conversor.Dominio.csproj", "{1D78B6E5-6999-4426-A9A6-2ACFD8CE3DF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Dominio", "Conversor.Entidades\Conversor.Dominio.csproj", "{1D78B6E5-6999-4426-A9A6-2ACFD8CE3DF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor.Repositorio", "Conversor.Repositorio\Conversor.Repositorio.csproj", "{7462B1B3-489D-4B0E-9B0F-0614147D1D53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Repositorio", "Conversor.Repositorio\Conversor.Repositorio.csproj", "{7462B1B3-489D-4B0E-9B0F-0614147D1D53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor.Shared", "Conversor.Shared\Conversor.Shared.csproj", "{2B84E6CB-9D29-4E9C-A66A-CCD111DC3B8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Shared", "Conversor.Shared\Conversor.Shared.csproj", "{2B84E6CB-9D29-4E9C-A66A-CCD111DC3B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor.Test", "Conversor.Test\Conversor.Test.csproj", "{73D12F30-E983-4DB4-B358-CB0021C73F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Test", "Conversor.Test\Conversor.Test.csproj", "{73D12F30-E983-4DB4-B358-CB0021C73F29}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{E1A9BF8A-3958-4045-9260-62DA8BEC4171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor.Aplicacao", "Conversor.Aplicacao\Conversor.Aplicacao.csproj", "{C9C991E0-D6C2-422C-B510-55DE6C8CFF13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Aplicacao", "Conversor.Aplicacao\Conversor.Aplicacao.csproj", "{C9C991E0-D6C2-422C-B510-55DE6C8CFF13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questionario", "Questionario", "{0FB9632C-FD8D-4C0D-A37D-57D780CB0BE2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Users\Verity\Downloads\Teste - backend - CSharp - .net (1)\Teste - SQL.pdf = ..\..\..\..\Users\Verity\Downloads\Teste - backend - CSharp - .net (1)\Teste - SQL.pdf
+		..\..\..\..\Users\Verity\Downloads\Teste - backend - CSharp - .net (1)\Teste - SQL.pdf.docx = ..\..\..\..\Users\Verity\Downloads\Teste - backend - CSharp - .net (1)\Teste - SQL.pdf.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
