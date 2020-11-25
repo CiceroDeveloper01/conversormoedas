@@ -27,7 +27,7 @@ namespace WebConversor.Controller
         }
 
         [HttpPost]
-        [Route("v1/enviarMoedas")]
+        [Route("v1/AddItemFila")]
         public IActionResult Post([FromBody]EntradaMoedas entradaMoedas)
         {
             try
@@ -46,7 +46,7 @@ namespace WebConversor.Controller
         }
 
         [HttpGet]
-        [Route("v1/ListaMoedas")]
+        [Route("v1/GetItemFila")]
         public IActionResult Get()
         {
             try
