@@ -1,18 +1,18 @@
 ﻿using BuscarCotacao.Entidades;
 using BuscarCotacao.Interfaces;
+using BuscarCotacao.Shared;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace BuscarCotacao.Aplicacao
 {
     public class BuscaDadosCotacoes : IBuscaDadosMoedas
     {
-        public List<MoedasApi> ObterDadosMoeadaApi(string urlApi)
+        public List<MoedasApi> ObterDadosMoeadasApi(string urlApi)
         {
             try
             {
@@ -26,19 +26,20 @@ namespace BuscarCotacao.Aplicacao
             }
             catch(Exception ex)
             {
+                Log.WriterLog("Busca Cotações", "ObterDadosMoeadasApi", ex.Message);
                 return null;
             }
         }
-        public List<MoedasCSV> ObterDadosMoedaCSV(string pathFile)
+        public List<DataMoedasCotacoesCSV> ObterDadosDataMoedasCotacoesCSV(string pathFile)
         {
             try
             {
                 var list = File.ReadAllLines(pathFile)
                     .Select(a => a.Split(';'))
                     .Skip(1)
-                    .Select(c => new MoedasCSV()
+                    .Select(c => new DataMoedasCotacoesCSV()
                     {
-                        IdMoeda = c[0],
+                        Moeda= c[0],
                         DataRef = Convert.ToDateTime(c[1])
                     })
                     .ToList();
@@ -46,6 +47,50 @@ namespace BuscarCotacao.Aplicacao
             }
             catch(Exception ex)
             {
+                Log.WriterLog("Busca Cotações", "ObterDadosDataMoedasCotacoesCSV", ex.Message);
+                return null;
+            }
+        }          
+        public List<DadosMoedasCotacoesCSV> ObterDadosMoedasCotacoesCSV(string pathFile)
+        {
+            try
+            {
+                var list = File.ReadAllLines(pathFile)
+                    .Select(a => a.Split(';'))
+                    .Skip(1)
+                    .Select(c => new DadosMoedasCotacoesCSV()
+                    {
+                        Id_Cotacao = int.Parse(c[0]),
+                        Moeda = c[1]
+                    })
+                    .ToList();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                Log.WriterLog("Busca Cotações", "ObterDadosMoedasCotacoesCSV", ex.Message);
+                return null;
+            }
+        }
+        public List<ValorMoedasCotacoesCSV> ObterDadosValorMoedasCotacoesCSV(string pathFile)
+        {
+            try
+            {
+                var list = File.ReadAllLines(pathFile)
+                    .Select(a => a.Split(';'))
+                    .Skip(1)
+                    .Select(c => new ValorMoedasCotacoesCSV()
+                    {
+                        Vlr_Cotacao = decimal.Parse(c[0]),
+                         Id_Cotacao = int.Parse(c[1]),
+                        Dat_Cotacao = Convert.ToDateTime(c[2])
+                    })
+                    .ToList();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                Log.WriterLog("Busca Cotações", "ObterDadosValorMoedasCotacoesCSV", ex.Message);
                 return null;
             }
         }

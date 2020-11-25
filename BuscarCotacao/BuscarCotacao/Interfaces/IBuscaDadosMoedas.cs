@@ -8,7 +8,10 @@ namespace BuscarCotacao.Interfaces
 {
     public interface IBuscaDadosMoedas
     {
-        List<MoedasCSV> ObterDadosMoedaCSV(string pathFile);
-        List<MoedasApi> ObterDadosMoeadaApi(string urlApi);
+        List<DataMoedasCotacoesCSV> ObterDadosDataMoedasCotacoesCSV(string pathFile);
+        List<MoedasApi> ObterDadosMoeadasApi(string urlApi);
+        List<DadosMoedasCotacoesCSV> ObterDadosMoedasCotacoesCSV(string pathFile);
+        List<ValorMoedasCotacoesCSV> ObterDadosValorMoedasCotacoesCSV(string pathFile);
+
     }
 }
